@@ -1,33 +1,9 @@
-![GA Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-# MEN Stack Homework
-
-For this assignment you are going to create an express app from scratch, using whatever model you want.
-
-**Read this *entire* page before you start**
-
-## <font color="red">There should be at least 15 commits.</font>
-1. Fork and then Clone this repo.
 2. The app should have one model with at least two properties.
 3. It should have all the CRUD functionality.
 4. It should contain all seven RESTful routes.
-5. This app will be very similiar to the fruits app, but the model must be different.
-6. **DO NOT COPY AND PASTE ANY CODE FROM YOUR FRUITS APP OR ANYWHERE ELSE**. It's okay to use it as a reference, but type it out.  **DO NOT COPY AND PASTE**. 
-7. Do one small step at a time, and then make sure that one step works, and commit before moving on. **You are required to have at least 15 commits**.
+moving on. **You are required to have at least 15 commits**.
 
-### Remember: Use this list of **RESTful routes** as your guide for HTTP methods, CRUD functionalities, and URL formatting:
-
-![RESTful routes](https://i.imgur.com/ReOfT0u.png)
-Refer to the lesson on [Intro to Rest](https://git.generalassemb.ly/la-seir-9-8/intro_to_Rest) to get a full explaination for each route.
-
-#### Hints and tips.
-
-* Don't forget to `npm init` in order to start your node project.
-
-* If you get an error message that says module not found—did you install the module?
-
-* **READ YOUR ERROR MESSAGES**, first try to solve them by going through the error message. 
-Then look it up (try googling the error message and including "express" and/or "mongoose"). Then compare to code that you know works, like the fruits app from class repo. Then slack an instructor.
 
 * Set up your db first and make sure it's connected.
 
