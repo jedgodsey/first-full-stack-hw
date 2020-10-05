@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Teams</title>
+    <title>Edit Team</title>
 </head>
 <body>
     <nav style="display:flex;flex-direction:row;">
@@ -11,15 +11,6 @@
         <a href="/teams">All Teams   </a>
         <a href="/teams/new">Add A Team   </a>
     </nav>
-    <h1>These Are All the Teams</h1>
-    <ul>
-        <% for (let i = 0; i < teams.length; i++) {%>
-            <li>
-                <a href="./teams/<%= i %>">
-                    <%=    teams[i].name %>
-            </a>
-            </li>
-            <% }%>
-    </ul>
+    
 </body>
 </html>

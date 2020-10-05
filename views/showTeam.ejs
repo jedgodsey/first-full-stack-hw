@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= teams[team].name %></title>
+</head>
+<body>
+    <nav style="display:flex;flex-direction:row;">
+        <a href="/">Home   </a>
+        <a href="/teams">All Teams   </a>
+        <a href="/teams/new">Add A Team   </a>
+    </nav>
+    <h1><%= teams[team].name %></h1>
+    <div>
+        Location: <%= teams[team].location %>
+    </div>
+    <div>
+        Super Bowl Wins: <%= teams[team].superbowls %>
+    </div>
+    <div>
+        Obnoxious Fans?: <%= teams[team].obnoxiousFans %>
+    </div>
+    <form method ="POST" action='/teams/<%= team %>?_method=DELETE'>
+        <input type="submit" value="DELETE THIS TEAM">
+    </form>
+    <form method ="PUT" action='/teams/<%= team %>/edit'>
+        <input type="submit" value="EDIT THIS TEAM">
+    </form>
+</body>
+</html>

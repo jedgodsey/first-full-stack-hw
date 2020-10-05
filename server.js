@@ -8,7 +8,6 @@ app.set('view engine', 'ejs');
 
 // Set up controller
 const teamCtrl = require('./controllers/teamController');
-const teams = require('./models/Team');
 
 //Middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -19,7 +18,8 @@ app.get('/', (req, res) => {
     res.render('allTeams');
 })
 
-
+//Team Routes
+app.use('/teams', teamCtrl);
 
 // Listener
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
