@@ -16,7 +16,7 @@ app.use(methodOverride('_method'));
 
 // Home Route
 app.get('/', (req, res) => {
-    res.send('it is alive');
+    res.render('allTeams');
 })
 
 
