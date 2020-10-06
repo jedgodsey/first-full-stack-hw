@@ -11,6 +11,22 @@
         <a href="/teams">All Teams   </a>
         <a href="/teams/new">Add A Team   </a>
     </nav>
+
+    <form action="/teams" method="POST">
+        <div>
+            Team Name: <input type="text" name="name">
+        </div>
+        <div>
+            Team Location: <input type="text" name="location">
+        </div>
+        <div>
+            Super Bowls Won: <input type="number" name="superbowls">
+        </div>
+        <div>
+            Obnoxious Fans?: <input type="checkbox" name="obnoxiousFans">
+        </div>
+        <input type="submit" value="Add Team">
+    </form>
     
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= teams[team].name %></title>
+    <title><%= team.name %></title>
 </head>
 <body>
     <nav style="display:flex;flex-direction:row;">
@@ -11,20 +11,20 @@
         <a href="/teams">All Teams   </a>
         <a href="/teams/new">Add A Team   </a>
     </nav>
-    <h1><%= teams[team].name %></h1>
+    <h1><%= team.name %></h1>
     <div>
-        Location: <%= teams[team].location %>
+        Location: <%= team.location %>
     </div>
     <div>
-        Super Bowl Wins: <%= teams[team].superbowls %>
+        Super Bowl Wins: <%= team.superbowls %>
     </div>
     <div>
-        Obnoxious Fans?: <%= teams[team].obnoxiousFans %>
+        Obnoxious Fans?: <%= team.obnoxiousFans %>
     </div>
-    <form method ="POST" action='/teams/<%= team %>?_method=DELETE'>
+    <form method ="POST" action='/teams/<%= teamIndex %>?_method=DELETE'>
         <input type="submit" value="DELETE THIS TEAM">
     </form>
-    <form method ="PUT" action='/teams/<%= team %>/edit'>
+    <form method ="PUT" action='/teams/<%= teamIndex %>/edit'>
         <input type="submit" value="EDIT THIS TEAM">
     </form>
 </body>

@@ -11,6 +11,24 @@
         <a href="/teams">All Teams   </a>
         <a href="/teams/new">Add A Team   </a>
     </nav>
+
+    <h1>Edit This Team</h1>
+
+    <form action="/teams/<%= teamIndex %>?_method=PUT" method="POST">
+        <div>
+            Team Name: <input type="text" value="<%= team.name %>" name="name">
+        </div>
+        <div>
+            Team Location: <input type="text" value="<%= team.location %>" name="location">
+        </div>
+        <div>
+            Super Bowls Won: <input type="number" value="<%= team.superbowls %>" name="superbowls">
+        </div>
+        <div>
+            Obnoxious Fans?: <input type="checkbox" <%= team.obnoxiousFans ? 'checked' : '' %> name="obnoxiousFans">
+        </div>
+        <input type="submit" value="EDIT TEAM">
+    </form>
     
 </body>
 </html>

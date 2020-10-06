@@ -5,29 +5,53 @@ const db = require('../models');
 
 ////// current paths imply '/teams'
 
+// render list of teams
 router.get('/', (req, res) => {
-    console.log('hitting path');
     res.render('allTeams', {teams: teams});
 })
 
+// render new team form
+router.get('/new', (req, res) => {
+    res.render('new', {})
+})
+
+// post team from 'new'
+router.post('/', (req, res) => {
+    console.log('firing')
+    req.body.obnoxiousFans = !!req.body.obnoxiousFans;
+    teams.push(req.body);
+    res.redirect(`/teams/${teams.length - 1}`);
+})
+
+// render show team
 router.get('/:team', (req, res) => {
-    let team = req.params.team;
+    let teamIndex = req.params.team;
     res.render('showTeam', {
-        team: team,
-        teams: teams
+        teamIndex: teamIndex,
+        team: teams[teamIndex]
     })
 })
 
+// delete team
 router.delete('/:team', (req, res) => {
     teams.splice(req.params.team, 1);
     res.redirect('/teams');
 })
 
+// render edit team
 router.get('/:team/edit', (req, res) => {
+    let teamIndex = req.params.team;
     res.render('edit', {
         teams: teams,
-        team: req.params.team
+        team: teams[req.params.team],
+        teamIndex: teamIndex
     })
+})
+
+router.put('/:team', (req, res) => {
+    req.body.obnoxiousFans = !!req.body.obnoxiousFans;
+    teams.splice(req.params.team, 1, req.body);
+    res.redirect(`/teams/${req.params.team}`);
 })
 
 module.exports = router;

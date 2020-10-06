@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const teams = require('./models/teams');
 const app = express();
 const PORT = 7000;
 
@@ -15,7 +16,7 @@ app.use(methodOverride('_method'));
 
 // Home Route
 app.get('/', (req, res) => {
-    res.render('allTeams');
+    res.render('allTeams', {teams: teams});
 })
 
 //Team Routes

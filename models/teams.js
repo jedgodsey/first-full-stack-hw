@@ -13,7 +13,7 @@ const teams = [
     },
     {
         name: 'Panthers',
-        location: 'seattle',
+        location: 'Charlotte',
         superbowls: 0,
         obnoxiousFans: false
     },
