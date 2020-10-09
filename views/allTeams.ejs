@@ -15,7 +15,7 @@
     <ul>
         <% for (let i = 0; i < teams.length; i++) {%>
             <li>
-                <a href="./teams/<%= i %>">
+                <a href="./teams/<%= teams[i].id %>">
                     <%=    teams[i].name %>
             </a>
             </li>
