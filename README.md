@@ -1,6 +1,5 @@
 
 2. The app should have one model with at least two properties.
-3. It should have all the CRUD functionality.
 4. It should contain all seven RESTful routes.
 moving on. **You are required to have at least 15 commits**.
 
